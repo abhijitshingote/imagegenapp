@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - ${HOST_PORT}:5000
+    environment:
+      - FLASK_ENV=production
+      - RUNPOD_KEY=${RUNPOD_KEY}
+      - ENDPOINT_ID=${ENDPOINT_ID}
